@@ -37,8 +37,8 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+    transform             : 'translate(-50%, -50%)',
+   }
 }
     return (
       <div>
@@ -50,14 +50,16 @@ const customStyles = {
 	          <ScopeWork />
 	          <FeesDates/>
             <div className="call-to-action">
-	            <div className="primary-btn"><a href="">Create contract</a></div>
+	            <div className="primary-btn" onClick={this.openModal} ><a>Create contract</a></div>
             </div>
 	         </div>
 	         <div className="sidebar"></div>
          </div>
-         <button className="primary-btn" onClick={this.openModal}>Trigger Modal</button>
+
           <Modal
            isOpen={this.state.showModal}
+           className="Modal"
+           overlayClassName="Overlay"
            style={customStyles}
         >
           <ModalContent closeModal={this.closeModal}/>
