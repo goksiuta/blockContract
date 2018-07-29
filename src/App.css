@@ -128,7 +128,9 @@ input:focus, textarea:focus, textarea:active {
     color:  #434855;
 }
 
-
+input::placeholder {
+  color: #BDC0C6;
+}
 
 .form-header {
   padding-bottom: 4px;

@@ -29,7 +29,7 @@ class ClientDetailsForm extends Component {
             <legend>
               <label for="company" > Company name </label> 
             </legend>
-            <input type="text" placeholder="e.g. Tesla" id="company" name="company" />
+            <input type="text"  id="company" name="company" />
           </div>
           <div className="list-item text-input">
             <legend>
@@ -43,6 +43,8 @@ class ClientDetailsForm extends Component {
             </legend>
             <input type="text" id="taxid" name="taxid" />
           </div>
+
+          
       </form>
       </div>
 

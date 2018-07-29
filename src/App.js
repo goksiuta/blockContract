@@ -17,6 +17,7 @@ class App extends Component {
 	          <ClientDetailsForm/>
 	          <ScopeWork />
 	          <FeesDates/>
+	          <div className=""></div>
 	         </div>
 	         <div className="sidebar"></div>
          </div>
