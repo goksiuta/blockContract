@@ -40,14 +40,15 @@ class ModalContent extends Component {
             <legend>
               <label for="address">Address</label>
             </legend>
-             <textarea className="create-contract-textarea">
-            Hello there, this is some text in a text area
+
+             <textarea className="create-contract-textarea"> 
+
           </textarea>
           </div>
 
           <div className="list-item textarea-item">
             <legend>
-              <label for="company" > Fee <br /> <br />  Ethereuem network free <br /> <br />  Total </label>
+              <label for="company" > Fee <br /> <br />  Ethereuem network fee <br /> <br />  Total </label>
             </legend>
             <p> 12.4534 ETH <br /> <br />  0.003 ETH <br /> <br /> <span className="big-text">  12.4564 ETH </span> </p>
           </div>
