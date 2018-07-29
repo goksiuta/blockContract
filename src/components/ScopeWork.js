@@ -16,7 +16,7 @@ class ScopeWork extends Component {
         <form>
 
             <textarea>
-            Hello there, this is some text in a text area
+            e.g. Create WordPress blog for the Ethereum chain developer in San Francisco area…
           </textarea>
 
       </form>
