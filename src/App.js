@@ -42,19 +42,23 @@ const customStyles = {
     return (
       <div>
         <TopNav/>
-        <SideBar/>
-         <div>
-          <ClientDetailsForm/>
-          <ScopeWork />
-          <FeesDates/>
-          <button onClick={this.openModal}>Trigger Modal</button>
+        <div className="Main-container">
+	        <SideBar/>
+	         <div>
+	          <ClientDetailsForm/>
+	          <ScopeWork />
+	          <FeesDates/>
+	          <div className=""></div>
+	         </div>
+	         <div className="sidebar"></div>
+         </div>
+      <button onClick={this.openModal}>Trigger Modal</button>
           <Modal
            isOpen={this.state.showModal}
            style={customStyles}
         >
           <ModalContent closeModal={this.closeModal}/>
         </Modal>
-         </div>
       </div>
     );
   }

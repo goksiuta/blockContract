@@ -1,21 +1,21 @@
 * {
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a { text-decoration: none; }
 body {
   margin: 0;
   padding: 0;
-  font-family: San Francisco Display, sans-serif;
+  
   background-color: #FAFAFA;
 }
-h3 { font-size: 1.1em; font-weight: 600; font-color: #363636;}
+h3 { font-size: 1.0em; font-weight: 600; }
 
-nav {height: 60px;
+nav {
+	height: 60px;
+	width:100%;
 	background-color: #FFF;
-border-bottom: 1px solid #F1F1F1;  }
+border-bottom: 1px solid #F1F1F1; position: fixed; top:0; z-index: 12312321  }
 nav { 
 	display: flex; 
 	justify-content: space-between;
@@ -25,9 +25,9 @@ align-items: center;}
 .profile-avatar { width: 100px;}
 
 /* Sidebar */
-.sidebar { width: 210px; margin: 60px 50px 0 50px }
+.sidebar { width: 210px; margin: 32px 50px 0 50px; }
 ul { list-style-type: none; padding-left: 0}
-ul li { height: 50px;  display: flex; align-items:center; }
+ul li { height: 42px;  display: flex; align-items:center; }
 ul li a { color: #484C53; padding-left: 20px; 
 			display: inline-block; width: 100%;}
 ul li:hover { background-color:#EDEEF0; border-radius: 3px }
