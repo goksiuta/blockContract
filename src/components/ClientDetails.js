@@ -22,7 +22,11 @@ class ClientDetailsForm extends Component {
               </div>
               <div className="radioItem">
                   <input type="radio" id="dewey" name="drone" />
+<<<<<<< HEAD
                   <label for="dewey">Individual</label>
+=======
+                  <label for="dewey">Private person</label>
+>>>>>>> 7844f6c43848198768f7ee367f1b4d8443bb66b2
               </div>
           </div>
           <div className="list-item text-input">
