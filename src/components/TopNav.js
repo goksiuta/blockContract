@@ -11,7 +11,7 @@ class TopNav extends Component {
            <img src={logo} />
         </div>
         <h3>  Development Services Agreement – 5 May, 2018 </h3> 
-        <div>
+        <div className="profile-avatar">
           Profile
         </div>
 
