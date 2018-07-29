@@ -17,7 +17,9 @@ class App extends Component {
 	          <ClientDetailsForm/>
 	          <ScopeWork />
 	          <FeesDates/>
-	          <div className=""></div>
+            <div className="call-to-action">
+	            <div className="primary-btn"><a href="">Create contract</a></div>
+            </div>
 	         </div>
 	         <div className="sidebar"></div>
          </div>

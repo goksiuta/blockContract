@@ -24,6 +24,14 @@ h5 { font-weight: 500; color:#717682; }
   margin-top: 92px;
 }
 
+.call-to-action { 
+  width: 800px;
+  margin: 32px;
+  margin-bottom: 100px;
+  }
+
+.Main-container .primary-btn { 
+  }
 .App {
   text-align: center;
 }
