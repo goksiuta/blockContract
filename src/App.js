@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import '/App.css';
 import TopNav from './components/TopNav'
 import ClientDetailsForm from './components/ClientDetails'
 import ScopeWork from './components/ScopeWork'
@@ -18,7 +17,7 @@ class App extends Component {
           <ScopeWork />
           <FeesDates/>
          </div>
-      </div> 
+      </div>
     );
   }
 }
