@@ -18,11 +18,11 @@ class ClientDetailsForm extends Component {
               <legend>Formal type</legend>
               <div className="radioItem">
                   <input type="radio" id="huey" name="drone" checked />
-                  <label for="huey">Huey</label>
+                  <label for="huey">Company</label>
               </div>
               <div className="radioItem">
                   <input type="radio" id="dewey" name="drone" />
-                  <label for="dewey">Dewey</label>
+                  <label for="dewey">Private person</label>
               </div>
           </div>
           <div className="list-item text-input">

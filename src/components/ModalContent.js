@@ -30,7 +30,7 @@ class ModalContent extends Component {
               <label for="address">Address</label>
             </legend>
              <textarea className="create-contract-textarea"> 
-            Hello there, this is some text in a text area
+            
           </textarea>
           </div>
           
