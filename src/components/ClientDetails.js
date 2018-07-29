@@ -15,7 +15,7 @@ class ClientDetailsForm extends Component {
 
         <form>
           <div className="radioInput list-item">
-              <legend>Select a maintenance drone</legend>
+              <legend>Formal type</legend>
               <div className="radioItem">
                   <input type="radio" id="huey" name="drone" checked />
                   <label for="huey">Huey</label>
@@ -27,21 +27,21 @@ class ClientDetailsForm extends Component {
           </div>
           <div className="list-item text-input">
             <legend>
-              Company name
+              <label for="company" > Company name </label> 
             </legend>
-            <input type="text" name="name" />
+            <input type="text" placeholder="e.g. Tesla" id="company" name="company" />
           </div>
           <div className="list-item text-input">
             <legend>
-              Address
+              <label for="address">Address</label>
             </legend>
-            <input type="text" name="name" />
+            <input type="text" id="address" name="address" />
           </div>
           <div className="list-item text-input">
             <legend>
-              VAT, TAXID
+              <label for="taxid"> VAT, TAXID</label>
             </legend>
-            <input type="text" name="name" />
+            <input type="text" id="taxid" name="taxid" />
           </div>
       </form>
       </div>

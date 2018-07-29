@@ -11,11 +11,14 @@ class App extends Component {
     return (
       <div>
         <TopNav/>
-        <SideBar/>
-         <div>
-          <ClientDetailsForm/>
-          <ScopeWork />
-          <FeesDates/>
+        <div className="Main-container">
+	        <SideBar/>
+	         <div>
+	          <ClientDetailsForm/>
+	          <ScopeWork />
+	          <FeesDates/>
+	         </div>
+	         <div className="sidebar"></div>
          </div>
       </div>
     );
