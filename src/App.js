@@ -11,27 +11,21 @@ import Web3 from 'web3'
 const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
 
 class App extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      showModal: false
-    };
+  state = {
+    showModal: false
+  };
 
-    this.openModal = this.openModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-    this.openMetaMask = this.openMetaMask.bind(this)
-  }
 
-  openModal() {
+  openModal = () => {
     this.setState({ showModal: true })
   }
 
-  closeModal() {
+  closeModal = () => {
     this.setState({ showModal: false })
   }
 
-  openMetaMask(e) {
+  openMetaMask = (e) => {
     e.preventDefault()
     web3.eth.sendTransaction({
     from: '0x23571754544cc1a95d269b8d75baff4c17a8b223',
@@ -41,6 +35,7 @@ class App extends Component {
   }
 
   render() {
+
 const customStyles = {
   content : {
     top                   : '50%',
