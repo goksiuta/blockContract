@@ -6,7 +6,7 @@ class SideBar extends Component {
   render() {
     return (
       <div className="sidebar">
-      <div className="primary-btn"><a href="#">Preview</a></div>
+      <div className="primary-btn"><a href="/contract">Preview</a></div>
 
 
       <ul>
