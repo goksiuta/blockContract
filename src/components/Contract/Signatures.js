@@ -12,14 +12,14 @@ class Signatures extends Component {
           <div className="contract-item">
             <div className="contract-legend">Contractor (You)</div>
             <div className="contract-signature">
-              <div className="checkbox"><img src={Check}/></div><div>Signed</div>
+              <div className="checkbox"><img src={Check} alt="checkbox"/></div><div>Signed</div>
             </div>
             <div className="contract-address">0x23571754544Cc1a95d269B8D75bAFf4C17A8B223</div>
           </div>
           <div className="contract-item">
             <div className="contract-legend">Employer</div>
             <div className="contract-signature">
-              <div className="checkbox"><img src={Check}/></div><div>Signed</div>
+              <div className="checkbox"><img src={Check} alt="checkbox"/></div><div>Signed</div>
             </div>
             <div className="contract-address">0xC8a013451768a24177926f6E27f938909A2C493E</div>
           </div>
