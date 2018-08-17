@@ -251,3 +251,68 @@ h2 {
   padding-left: 32px;
   font-weight: 400;
 }
+
+/* Message Box */
+
+.message-box {
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+}
+
+.message-contractor {
+  background-color: #4957B8;
+  color: white;
+  padding: 24px 30px 12px 30px;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 12px;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomright: 0;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+}
+
+.message-employer {
+  background-color: #EBECF1;
+  color: #595B63;
+  padding: 24px 30px 12px 30px;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 12px;
+  -webkit-border-radius: 20px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 20px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+}
+
+.message-text {
+  margin: auto;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.message-signed {
+ font-size: .92em;
+ margin-bottom: 12px;
+}
+
+.message-button {
+  background-color: #4957B8;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 1em 1em 1em 1em;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  border: 0px solid
+
+}
