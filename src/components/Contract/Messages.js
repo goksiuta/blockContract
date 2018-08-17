@@ -10,7 +10,7 @@ class Messages extends Component {
           <h2> Messages </h2>
         </div>
           <MessageBox/>
-          <div className="list-item text-input">
+          <div className="message-input">
             <input type="text"  id="message" name="message" placeholder="Type your message here..." />
             <button className="message-button">Send</button>
 
