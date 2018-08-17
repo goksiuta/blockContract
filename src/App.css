@@ -266,7 +266,23 @@ h2 {
   margin: auto;
   padding-top: 12px;
   padding-bottom: 12px;
+}
 
+.msg-right {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.msg-left {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+}
+
+.msg-center {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    text-align: center;
 }
 
 .message-contractor {
@@ -342,6 +358,7 @@ h2 {
   height: 120px;
   display: flex;
   justify-content: center;
+  padding-bottom: 1em;
 }
 
 
