@@ -7,15 +7,15 @@ class TopNav extends Component {
   render() {
     return (
       <nav>
-        <div className="logo"> 
-           <img src={logo} />
+        <div className="logo">
+           <a href="/"><img src={logo} /></a>
         </div>
-        <h3>  Development Services Agreement – 5 May, 2018 </h3> 
+        <h3>  Development Services Agreement – 5 May, 2018 </h3>
         <div className="profile-avatar">
           Profile
         </div>
 
-      </nav> 
+      </nav>
     );
   }
 }
