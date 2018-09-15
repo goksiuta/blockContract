@@ -6,6 +6,16 @@ import io from 'socket.io-client'
 const socket = io('http://localhost:8100')
 
 class Messages extends Component {
+
+  state = {
+    message: null
+  }
+
+  handleSubmit = () => {
+    socket.emit('message', this.state.message)
+    this.setState({ message: '' })
+  }
+
   render() {
     return (
       <div className="Contract-container">
@@ -15,8 +25,8 @@ class Messages extends Component {
         </div>
           <MessageBox/>
           <div className="message-input">
-            <input type="text"  id="message" name="message" placeholder="Type your message here..." />
-            <button className="message-button">Send</button>
+            <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message} onChange={(event) => this.setState({ message: event.target.value })}/>
+            <button className="message-button" onClick={this.handleSubmit}>Send</button>
 
           </div>
         </div>
