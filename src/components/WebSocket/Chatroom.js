@@ -8,12 +8,13 @@ const socket = io('http://localhost:8100')
 class Messages extends Component {
 
   state = {
-    message: null
+    message: { user1: null, user2: null },
+    messages: []
   }
 
-  handleSubmit = () => {
-    socket.emit('message', this.state.message)
-    this.setState({ message: '' })
+  handleSubmit = (user) => {
+    socket.emit('message', this.state.message[user])
+    this.setState({ message: { [user]: '' } })
   }
 
   render() {
@@ -25,8 +26,8 @@ class Messages extends Component {
         </div>
           <MessageBox/>
           <div className="message-input">
-            <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message} onChange={(event) => this.setState({ message: event.target.value })}/>
-            <button className="message-button" onClick={this.handleSubmit}>Send</button>
+            <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user1} onChange={(event) => this.setState({ message: { user1: event.target.value }})}/>
+            <button className="message-button" onClick={() => this.handleSubmit('user1')}>Send</button>
 
           </div>
         </div>
@@ -36,8 +37,8 @@ class Messages extends Component {
           </div>
             <MessageBox/>
             <div className="message-input">
-              <input type="text"  id="message" name="message" placeholder="Type your message here..." />
-              <button className="message-button">Send</button>
+              <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user2} onChange={(event) => this.setState({ message: { user2: event.target.value }})}/>
+              <button className="message-button" onClick={() => this.handleSubmit('user2')}>Send</button>
 
             </div>
           </div>
