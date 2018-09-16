@@ -2,27 +2,30 @@ import React, { Component } from 'react'
 import '../../App.css';
 import MessageBox from '../Contract/MessageBox'
 import io from 'socket.io-client'
-
+import handleResponse from './API'
 const socket = io('http://localhost:8100')
 
-let messages = []
-
-socket.on('message', msg => {
-  messages.push(msg)
-  console.log(messages)
-})
-
 class Messages extends Component {
+  constructor(props) {
+    super(props)
+      this.state = {
+        message: { user1: null, user2: null },
+        messages: []
+      }
 
-  state = {
-    message: { user1: null, user2: null },
-    messages: messages
+    handleResponse((err, msg) => {
+      this.setState({ messages: [ ...this.state.messages, msg ] })
+    })
   }
+
+
 
   handleSubmit = (user) => {
     socket.emit('message', this.state.message[user])
     this.setState({ message: { [user]: '' } })
   }
+
+
 
 
 
