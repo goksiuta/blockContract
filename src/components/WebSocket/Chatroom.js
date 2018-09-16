@@ -5,11 +5,18 @@ import io from 'socket.io-client'
 
 const socket = io('http://localhost:8100')
 
+let messages = []
+
+socket.on('message', msg => {
+  messages.push(msg)
+  console.log(messages)
+})
+
 class Messages extends Component {
 
   state = {
     message: { user1: null, user2: null },
-    messages: []
+    messages: messages
   }
 
   handleSubmit = (user) => {
@@ -17,14 +24,17 @@ class Messages extends Component {
     this.setState({ message: { [user]: '' } })
   }
 
+
+
   render() {
+    console.log(this.state);
     return (
       <div className="Contract-container">
       <div className="contract-section">
         <div className="contract-header">
           <h2> Messages </h2>
         </div>
-          <MessageBox/>
+          <MessageBox messages={this.state.messages}/>
           <div className="message-input">
             <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user1} onChange={(event) => this.setState({ message: { user1: event.target.value }})}/>
             <button className="message-button" onClick={() => this.handleSubmit('user1')}>Send</button>
