@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../../App.css';
-import MessageBox from '../Contract/MessageBox'
+import ChatBox from './ChatBox'
 import io from 'socket.io-client'
 import handleResponse from './API'
 const socket = io('http://localhost:8100')
@@ -8,6 +8,7 @@ const socket = io('http://localhost:8100')
 class Messages extends Component {
   constructor(props) {
     super(props)
+
       this.state = {
         message: { user1: null, user2: null },
         messages: []
@@ -18,16 +19,10 @@ class Messages extends Component {
     })
   }
 
-
-
   handleSubmit = (user) => {
-    socket.emit('message', this.state.message[user])
+    socket.emit('message', {[user]: this.state.message[user]})
     this.setState({ message: { [user]: '' } })
   }
-
-
-
-
 
   render() {
     console.log(this.state);
@@ -35,9 +30,9 @@ class Messages extends Component {
       <div className="Contract-container">
       <div className="contract-section">
         <div className="contract-header">
-          <h2> Messages </h2>
+          <h2> Contractor </h2>
         </div>
-          <MessageBox messages={this.state.messages}/>
+          <ChatBox messages={this.state.messages} from='Contractor' />
           <div className="message-input">
             <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user1} onChange={(event) => this.setState({ message: { user1: event.target.value }})}/>
             <button className="message-button" onClick={() => this.handleSubmit('user1')}>Send</button>
@@ -46,9 +41,9 @@ class Messages extends Component {
         </div>
         <div className="contract-section">
           <div className="contract-header">
-            <h2> Messages </h2>
+            <h2> Employer </h2>
           </div>
-            <MessageBox/>
+            <ChatBox messages={this.state.messages} from='Employer' />
             <div className="message-input">
               <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user2} onChange={(event) => this.setState({ message: { user2: event.target.value }})}/>
               <button className="message-button" onClick={() => this.handleSubmit('user2')}>Send</button>

@@ -3,19 +3,8 @@ import '../../App.css';
 
 class MessageBox extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="message-box">
-
-        {this.props.messages && this.props.messages.map(msg => {
-          return (<div className="msg-right">
-            <div></div>
-            <div className="message-contractor">
-              <div className="message-text">{msg}</div>
-            </div>
-          </div>)
-        })}
-
         <div className="msg-right">
           <div></div>
           <div className="message-contractor">
