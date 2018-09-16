@@ -24,6 +24,13 @@ class Messages extends Component {
     this.setState({ message: { [user]: '' } })
   }
 
+  handleKeyPress = (e, user) => {
+    if (e.key === 'Enter') {
+      socket.emit('message', {[user]: this.state.message[user]})
+      this.setState({ message: { [user]: '' } })
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -34,8 +41,8 @@ class Messages extends Component {
         </div>
           <ChatBox messages={this.state.messages} from='Contractor' />
           <div className="message-input">
-            <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user1} onChange={(event) => this.setState({ message: { user1: event.target.value }})}/>
-            <button className="message-button" onClick={() => this.handleSubmit('user1')}>Send</button>
+            <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user1} onChange={(event) => this.setState({ message: { user1: event.target.value }})} onKeyPress={(e) => this.handleKeyPress(e, 'user1')} />
+            <button className="message-button" onClick={() => this.handleSubmit('user1')} >Send</button>
 
           </div>
         </div>
@@ -45,7 +52,7 @@ class Messages extends Component {
           </div>
             <ChatBox messages={this.state.messages} from='Employer' />
             <div className="message-input">
-              <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user2} onChange={(event) => this.setState({ message: { user2: event.target.value }})}/>
+              <input type="text"  id="message" name="message" placeholder="Type your message here..." value={this.state.message.user2} onChange={(event) => this.setState({ message: { user2: event.target.value }})} onKeyPress={(e) => this.handleKeyPress(e, 'user2')} />
               <button className="message-button" onClick={() => this.handleSubmit('user2')}>Send</button>
 
             </div>
